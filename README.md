@@ -4,7 +4,7 @@ cds_sync
 This
 [single header file](https://github.com/nothings/stb/blob/master/docs/other_libs.md)
 C90 library provides a portable collection of synchronization
-primitives for use in multithreaded programming. The following
+primitives for use in multithreaded programming - by [Cort Stratton](https://codeberg.org/cdwfs). The following
 primitives are provided:
 
 - `cds_sync_futex_t` -- A [futex](https://en.wikipedia.org/wiki/Futex)
@@ -28,7 +28,20 @@ primitives are provided:
   wait for the semaphore to have a certain positive non-zero value.
 - `cds_sync_barrier_t` -- Lets users specify a barrier that all
   threads must reach before any thread can proceed.
-  
+
+Installation
+------------
+
+Run:
+```bash
+$ npm i cds_sync.c
+```
+
+And then include `cds_sync.h` as follows:
+```c
+#include "node_modules/cds_sync.c/cds_sync.h"
+```
+
 Key Features / Design Goals
 ---------------------------
 - **Identical API on all supported platforms**. The following
@@ -54,3 +67,10 @@ Acknowledgements
 - [Sean Barrett](http://nothings.org/): master of single-header C libraries.
 - [Charles Bloom](http://cbloomrants.blogspot.com/): poster of sync primitives; ranter.
 - [Allen B. Downey](http://www.allendowney.com/): author of [The Little Book of Semaphores](http://greenteapress.com/semaphores/index.html).
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/cds_sync.c)
