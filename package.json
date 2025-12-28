@@ -1,9 +1,19 @@
 {
   "name": "cds_sync.c",
-  "version": "1.2015.10",
+  "version": "1.2015.11",
   "description": "Single-header C90 collection of synchronization primitives; Cort Stratton (2015).",
-  "keywords": ["c", "library", "sync", "synchronization", "mutex", "semaphore", "condition variable", "thread", "threading", "cross-platform"],
-  "license": "MIT",
+  "keywords": [
+    "c",
+    "library",
+    "sync",
+    "synchronization",
+    "mutex",
+    "semaphore",
+    "condition variable",
+    "thread",
+    "threading",
+    "cross-platform"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nodef/cds_sync.c.git"
@@ -11,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/nodef/cds_sync.c/issues"
   },
-  "homepage": "https://github.com/nodef/cds_sync.c#readme"
+  "homepage": "https://github.com/nodef/cds_sync.c#readme",
+  "license": "CC0-1.0",
+  "author": "wolfram77@gmail.com",
+  "main": "cds_sync.h",
+  "scripts": {
+    "test": "bash build.sh test"
+  }
 }

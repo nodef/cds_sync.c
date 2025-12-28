@@ -29,18 +29,52 @@ primitives are provided:
 - `cds_sync_barrier_t` -- Lets users specify a barrier that all
   threads must reach before any thread can proceed.
 
+<br>
+
 Installation
 ------------
 
 Run:
-```bash
+
+```sh
 $ npm i cds_sync.c
 ```
 
 And then include `cds_sync.h` as follows:
+
 ```c
+// main.c
+#define CDS_SYNC_IMPLEMENTATION
 #include "node_modules/cds_sync.c/cds_sync.h"
+
+int main() { /* ... */ }
 ```
+
+And then compile with `clang` or `gcc` as usual.
+
+```bash
+$ clang main.c  # or, use gcc
+$ gcc   main.c
+```
+
+You may also use a simpler approach:
+
+```c
+// main.c
+#define CDS_SYNC_IMPLEMENTATION
+#include <cds_sync.h>
+
+int main() { /* ... */ }
+```
+
+If you add the path `node_modules/cds_sync.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/cds_sync.c main.c  # or, use gcc
+$ gcc   -I./node_modules/cds_sync.c main.c
+```
+
+<br>
 
 Key Features / Design Goals
 ---------------------------
@@ -60,7 +94,9 @@ Key Features / Design Goals
   implementations through `#define`s if desired.
 - **Dirt-simple integration**. Just a single header file to include in
 your project.
-- **Public domain license terms**. 
+- **Public domain license terms**.
+
+<br>
 
 Acknowledgements
 ----------------
