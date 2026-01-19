@@ -1,6 +1,6 @@
 {
   "name": "cds_sync.c",
-  "version": "1.2015.11",
+  "version": "1.2015.12",
   "description": "Single-header C90 collection of synchronization primitives; Cort Stratton (2015).",
   "keywords": [
     "c",
